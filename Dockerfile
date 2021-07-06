@@ -1,9 +1,8 @@
-FROM debian:stretch-slim
+FROM node:8.17.0-stretch-slim
 
-RUN sudo apt-get update
-RUN sudo apt-get install curl -y
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-RUN sudo apt-get install nodejs -y
+RUN apt-get update
+RUN apt-get install python make g++ -y
+
 
 WORKDIR /app
 
